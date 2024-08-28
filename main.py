@@ -7,6 +7,9 @@ def adjust_recipe(recipe, persons_count: int):
     """
     A doc string
     """
+    n = recipe["servings"] / persons_count
+    for i in recipe['ingredients']:
+        recipe['ingredients'][i] = recipe['ingredients'][i] / n
     recipe["servings"] = persons_count
     return recipe
 
