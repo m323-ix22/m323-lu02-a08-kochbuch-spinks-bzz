@@ -8,6 +8,7 @@ def adjust_recipe(recipe, persons_count: int):
     A doc string
     """
     recipe["servings"] = persons_count
+    return recipe
 
 def load_recipe(recipes: str):
     """
